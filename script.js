@@ -11,7 +11,7 @@ function PrintDeveloperbyMap() {
   arr.map((user) => {
     if (user.profession === "developer") {
       console.log(
-        `id : ${user.id}, Name : ${user.name}, Profession : ${user.profession}`
+        `id : ${user.id}, Name : ${user.name}, Age : ${user.age}, Profession : ${user.profession}`
       );
     }
   });
@@ -22,11 +22,13 @@ function PrintDeveloperbyForEach() {
   arr.forEach((user) => {
     if (user.profession === "developer") {
       console.log(
-        `id : ${user.id}, Name : ${user.name}, Profession : ${user.profession}`
+        `id : ${user.id}, Name : ${user.name}, Age : ${user.age}, Profession : ${user.profession}`
       );
     }
   });
 }
+
+const newUser = Object.create(arr[0]);
 
 function addData() {
   //Write your code here, just console.log
@@ -56,8 +58,7 @@ function addData() {
     "QA Engineer",
   ];
 
-  const newUser = Object.create(arr[0]);
-  newUser.id = arr[arr.length - 1].id + 1;
+  newUser.id = 4;
   newUser.name = Names[Math.floor(Math.random() * 10)];
   newUser.age = "22";
   newUser.profession = itProfessions[Math.floor(Math.random() * 10)];
@@ -65,17 +66,17 @@ function addData() {
   arr.push(newUser);
   arr.forEach((user) => {
     console.log(
-      `id : ${user.id}, Name : ${user.name}, Profession : ${user.profession}`
+      `id : ${user.id}, Name : ${user.name}, Age : ${user.age}, Profession : ${user.profession}`
     );
   });
 }
 
 function removeAdmin() {
   //Write your code here, just console.log
-  const employees = arr.filter((user) => user.profession !== "admin");
-  for (let employe of employees) {
+  arr = arr.filter((user) => user.profession !== "admin");
+  for (let employe of arr) {
     console.log(
-      `id : ${employe.id}, Name : ${employe.name}, Profession : ${employe.profession}`
+      `id : ${employe.id}, Name : ${employe.name}, Age : ${employe.age}, Profession : ${employe.profession}`
     );
   }
 }
@@ -121,7 +122,7 @@ function concatenateArray() {
 
   arr.forEach((user) => {
     console.log(
-      `id : ${user.id}, Name : ${user.name}, Profession : ${user.profession}`
+      `id : ${user.id}, Name : ${user.name}, Age : ${user.age}, Profession : ${user.profession}`
     );
   });
 }
