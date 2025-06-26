@@ -11,7 +11,7 @@ function PrintDeveloperbyMap() {
   arr.map((user) => {
     if (user.profession === "developer") {
       console.log(
-        `id : ${arr.id}, Name : ${user.name}, Profession : ${user.profession}`
+        `id : ${user.id}, Name : ${user.name}, Profession : ${user.profession}`
       );
     }
   });
@@ -22,7 +22,7 @@ function PrintDeveloperbyForEach() {
   arr.forEach((user) => {
     if (user.profession === "developer") {
       console.log(
-        `id : ${arr.id}, Name : ${user.name}, Profession : ${user.profession}`
+        `id : ${user.id}, Name : ${user.name}, Profession : ${user.profession}`
       );
     }
   });
